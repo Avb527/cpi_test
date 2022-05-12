@@ -72,27 +72,7 @@ function App() {
     return connection;
   }
 
-  async function init() {
-    const provider = await getProvider();
-    const connection = await getConnection();
-    console.log('address of puppet program : ', puppetID.toString())
-    const puppetprogram = new Program(puppetidl, puppetID, provider);
-    //console.log(puppetprogram.puppetID.toString())
-    console.log(puppetprogram.provider);
-
-    const puppet = anchor.web3.Keypair.generate();
-
-    const tx = await puppetprogram.rpc.initialize({
-      accounts: {
-        puppet: puppet.publicKey,
-        user: provider.wallet.publicKey,
-        systemProgram: SystemProgram.programId,
-      },
-      signers: [puppet],
-    });
-
-    console.log(tx);
-  }
+ 
 
   async function test() {
 
@@ -150,7 +130,6 @@ function App() {
       <div className="App">
         <div>
           <br/>
-          <button onClick={init}>init</button>
           <br/>
           <br/>
           <button onClick={test}>test</button>
