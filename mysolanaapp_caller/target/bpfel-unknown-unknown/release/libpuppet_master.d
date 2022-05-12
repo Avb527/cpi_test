@@ -1,0 +1,1 @@
+/home/user/myWorkspace/cpi_test/mysolanaapp_caller/target/bpfel-unknown-unknown/release/libpuppet_master.rlib: /home/user/myWorkspace/cpi_test/mysolanaapp/programs/puppet/src/lib.rs /home/user/myWorkspace/cpi_test/mysolanaapp_caller/programs/puppet-master/src/lib.rs
